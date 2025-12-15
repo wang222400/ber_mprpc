@@ -103,7 +103,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace fixbug
 static ::_pb::Metadata file_level_metadata_test_2eproto[6];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_test_2eproto[1];
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_test_2eproto = nullptr;
+static const ::_pb::ServiceDescriptor* file_level_service_descriptors_test_2eproto[1];
 
 const uint32_t TableStruct_test_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -184,11 +184,15 @@ const char descriptor_table_protodef_test_2eproto[] PROTOBUF_SECTION_VARIABLE(pr
   "ug.User.Sex\"\031\n\003Sex\022\007\n\003MAN\020\000\022\t\n\005WOMAN\020\001\"d"
   "\n\026GetFriendListsResponse\022\'\n\013result_code\030"
   "\001 \001(\0132\022.fixbug.ResultCode\022!\n\013friend_list"
-  "\030\002 \003(\0132\014.fixbug.Userb\006proto3"
+  "\030\002 \003(\0132\014.fixbug.User2\227\001\n\016UserServiceRpc\022"
+  "4\n\005Login\022\024.fixbug.LoginRequest\032\025.fixbug."
+  "LoginResponse\022O\n\016GetFriendLists\022\035.fixbug"
+  ".GetFriendListsRequest\032\036.fixbug.GetFrien"
+  "dListsResponseB\003\200\001\001b\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_test_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_test_2eproto = {
-    false, false, 428, descriptor_table_protodef_test_2eproto,
+    false, false, 587, descriptor_table_protodef_test_2eproto,
     "test.proto",
     &descriptor_table_test_2eproto_once, nullptr, 0, 6,
     schemas, file_default_instances, TableStruct_test_2eproto::offsets,
@@ -1534,6 +1538,120 @@ void GetFriendListsResponse::InternalSwap(GetFriendListsResponse* other) {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_test_2eproto_getter, &descriptor_table_test_2eproto_once,
       file_level_metadata_test_2eproto[5]);
+}
+
+// ===================================================================
+
+UserServiceRpc::~UserServiceRpc() {}
+
+const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* UserServiceRpc::descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_test_2eproto);
+  return file_level_service_descriptors_test_2eproto[0];
+}
+
+const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* UserServiceRpc::GetDescriptor() {
+  return descriptor();
+}
+
+void UserServiceRpc::Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                         const ::fixbug::LoginRequest*,
+                         ::fixbug::LoginResponse*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method Login() not implemented.");
+  done->Run();
+}
+
+void UserServiceRpc::GetFriendLists(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                         const ::fixbug::GetFriendListsRequest*,
+                         ::fixbug::GetFriendListsResponse*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method GetFriendLists() not implemented.");
+  done->Run();
+}
+
+void UserServiceRpc::CallMethod(const ::PROTOBUF_NAMESPACE_ID::MethodDescriptor* method,
+                             ::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                             const ::PROTOBUF_NAMESPACE_ID::Message* request,
+                             ::PROTOBUF_NAMESPACE_ID::Message* response,
+                             ::google::protobuf::Closure* done) {
+  GOOGLE_DCHECK_EQ(method->service(), file_level_service_descriptors_test_2eproto[0]);
+  switch(method->index()) {
+    case 0:
+      Login(controller,
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::fixbug::LoginRequest*>(
+                 request),
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::fixbug::LoginResponse*>(
+                 response),
+             done);
+      break;
+    case 1:
+      GetFriendLists(controller,
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::fixbug::GetFriendListsRequest*>(
+                 request),
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::fixbug::GetFriendListsResponse*>(
+                 response),
+             done);
+      break;
+    default:
+      GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
+      break;
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message& UserServiceRpc::GetRequestPrototype(
+    const ::PROTOBUF_NAMESPACE_ID::MethodDescriptor* method) const {
+  GOOGLE_DCHECK_EQ(method->service(), descriptor());
+  switch(method->index()) {
+    case 0:
+      return ::fixbug::LoginRequest::default_instance();
+    case 1:
+      return ::fixbug::GetFriendListsRequest::default_instance();
+    default:
+      GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
+      return *::PROTOBUF_NAMESPACE_ID::MessageFactory::generated_factory()
+          ->GetPrototype(method->input_type());
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message& UserServiceRpc::GetResponsePrototype(
+    const ::PROTOBUF_NAMESPACE_ID::MethodDescriptor* method) const {
+  GOOGLE_DCHECK_EQ(method->service(), descriptor());
+  switch(method->index()) {
+    case 0:
+      return ::fixbug::LoginResponse::default_instance();
+    case 1:
+      return ::fixbug::GetFriendListsResponse::default_instance();
+    default:
+      GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
+      return *::PROTOBUF_NAMESPACE_ID::MessageFactory::generated_factory()
+          ->GetPrototype(method->output_type());
+  }
+}
+
+UserServiceRpc_Stub::UserServiceRpc_Stub(::PROTOBUF_NAMESPACE_ID::RpcChannel* channel)
+  : channel_(channel), owns_channel_(false) {}
+UserServiceRpc_Stub::UserServiceRpc_Stub(
+    ::PROTOBUF_NAMESPACE_ID::RpcChannel* channel,
+    ::PROTOBUF_NAMESPACE_ID::Service::ChannelOwnership ownership)
+  : channel_(channel),
+    owns_channel_(ownership == ::PROTOBUF_NAMESPACE_ID::Service::STUB_OWNS_CHANNEL) {}
+UserServiceRpc_Stub::~UserServiceRpc_Stub() {
+  if (owns_channel_) delete channel_;
+}
+
+void UserServiceRpc_Stub::Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                              const ::fixbug::LoginRequest* request,
+                              ::fixbug::LoginResponse* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(0),
+                       controller, request, response, done);
+}
+void UserServiceRpc_Stub::GetFriendLists(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                              const ::fixbug::GetFriendListsRequest* request,
+                              ::fixbug::GetFriendListsResponse* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(1),
+                       controller, request, response, done);
 }
 
 // @@protoc_insertion_point(namespace_scope)

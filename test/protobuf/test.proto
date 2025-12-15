@@ -2,6 +2,10 @@ syntax = "proto3"; //声明protobuf的版本
 
 package fixbug; //声明代码所在的包（对于C++来说是namespace）
 
+//定义下面的选项，表示生成service服务类和rpc方法描述，默认不生成
+option cc_generic_services = true;
+
+//数据 列表 映射表
 message ResultCode {
   int32 errcode = 1;
   bytes errmg = 2;
@@ -33,4 +37,11 @@ message User {
 message GetFriendListsResponse {
   ResultCode result_code = 1;
   repeated User friend_list = 2; //定义一个列表类型
+}
+
+//在ptotobuf里面怎么定义描述rpc方法的类型 - service
+
+service UserServiceRpc {
+  rpc Login(LoginRequest) returns(LoginResponse);
+  rpc GetFriendLists(GetFriendListsRequest) returns(GetFriendListsResponse);
 }
