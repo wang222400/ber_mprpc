@@ -2,5 +2,6 @@
 /home/wbw/Myproject/ber_mprpc/build/CMakeFiles/rebuild_cache.dir
 /home/wbw/Myproject/ber_mprpc/build/example/CMakeFiles/edit_cache.dir
 /home/wbw/Myproject/ber_mprpc/build/example/CMakeFiles/rebuild_cache.dir
+/home/wbw/Myproject/ber_mprpc/build/example/callee/CMakeFiles/provider.dir
 /home/wbw/Myproject/ber_mprpc/build/example/callee/CMakeFiles/edit_cache.dir
 /home/wbw/Myproject/ber_mprpc/build/example/callee/CMakeFiles/rebuild_cache.dir
