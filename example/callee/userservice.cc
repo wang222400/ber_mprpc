@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include "user.pb.h"
+#include "mprpcapplication.h"
+#include "rpcprovider.h"
 /* UserService 原来是一个本地服务器，提供了两个进程方法，Login和GetFriendLists，怎么把它变成一个rpc？ */
 class UserService : public fixbug::UserServiceRpc //使用在rpc服务发布端
 {
@@ -38,7 +40,17 @@ public:
 
 
 
-int main()
+int main(int argc, char **argv)
 {
+    //调用框架的初始化操作
+    MprpcApplication::GetInstance().Init(argc,argv);
 
+    //provider是一个rpc网络服务对象，把UserService对象发布到rpc节点上
+    RpcProvider provider;
+    provider.NotifyService(new UserService());
+    //启动一个rpc服务发布节点，Run以后，进程进入阻塞状态，等待远程的rpc调用请求
+    provider.Run();
+
+
+    return 0
 }
