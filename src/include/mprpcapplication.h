@@ -1,6 +1,7 @@
 #ifndef MPRPCAPPLICATION_H
 #define MPRPCAPPLICATION_H
 
+#include "mprpcconfig.h"
 //框架的基础类，负责框架的初始化操作
 class MprpcApplication{
 public:
@@ -8,7 +9,10 @@ public:
 
     static MprpcApplication& GetInstance();
 
+    static MprpcConfig& GetConfig();
 private:
+    static MprpcConfig m_config;
+
     MprpcApplication(){}
     MprpcApplication(const MprpcApplication&) = delete;
     MprpcApplication(MprpcApplication&&) = delete;
