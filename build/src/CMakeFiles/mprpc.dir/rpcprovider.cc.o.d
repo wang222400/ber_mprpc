@@ -336,4 +336,5 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/11/cassert \
  /home/wbw/Myproject/ber_mprpc/src/include/mprpcapplication.h \
+ /home/wbw/Myproject/ber_mprpc/src/include/rpcprovider.h \
  /home/wbw/Myproject/ber_mprpc/src/include/mprpcconfig.h

@@ -2,7 +2,6 @@
 #include <string>
 #include "user.pb.h"
 #include "mprpcapplication.h"
-#include "rpcprovider.h"
 /* UserService 原来是一个本地服务器，提供了两个进程方法，Login和GetFriendLists，怎么把它变成一个rpc？ */
 class UserService : public fixbug::UserServiceRpc //使用在rpc服务发布端
 {

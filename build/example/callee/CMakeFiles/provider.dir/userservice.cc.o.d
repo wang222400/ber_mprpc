@@ -255,7 +255,6 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/11/cassert /usr/local/include/google/protobuf/service.h \
  /home/wbw/Myproject/ber_mprpc/src/include/mprpcapplication.h \
- /home/wbw/Myproject/ber_mprpc/src/include/mprpcconfig.h \
  /home/wbw/Myproject/ber_mprpc/src/include/rpcprovider.h \
  /usr/include/muduo/net/TcpServer.h /usr/include/muduo/base/Atomic.h \
  /usr/include/muduo/base/noncopyable.h /usr/include/muduo/base/Types.h \
@@ -337,4 +336,5 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: \
  /usr/include/boost/type_traits/is_same.hpp \
  /usr/include/muduo/net/EventLoop.h /usr/include/muduo/base/Mutex.h \
  /usr/include/muduo/base/CurrentThread.h /usr/include/muduo/net/TimerId.h \
- /home/wbw/Myproject/ber_mprpc/src/include/rpcheader.pb.h
+ /home/wbw/Myproject/ber_mprpc/src/include/rpcheader.pb.h \
+ /home/wbw/Myproject/ber_mprpc/src/include/mprpcconfig.h
