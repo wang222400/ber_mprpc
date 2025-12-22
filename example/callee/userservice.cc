@@ -47,6 +47,7 @@ int main(int argc, char **argv)
 
     //provider是一个rpc网络服务对象，把UserService对象发布到rpc节点上
     RpcProvider provider;
+    //需要一张表，来记录服务对象和其发布的所有的服务方法，当rpc请求到达时可以调用
     provider.NotifyService(new UserService());
     //启动一个rpc服务发布节点，Run以后，进程进入阻塞状态，等待远程的rpc调用请求
     provider.Run();
