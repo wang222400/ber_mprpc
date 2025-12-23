@@ -1,9 +1,13 @@
 #ifndef MPRPCCHANNEL_H
 #define MPRPCCHANNEL_H
 
+#include<memory>
+
 #include<google/protobuf/service.h>
 #include<google/protobuf/descriptor.h>
 #include <google/protobuf/message.h>
+
+#include "zookeeperutil.h"
 
 class MprpcChannel : public google::protobuf::RpcChannel{
 public:
@@ -11,7 +15,7 @@ public:
                           google::protobuf::RpcController* controller, const google::protobuf::Message* request,
                           google::protobuf::Message* response, google::protobuf::Closure* done);
 private:
-
+    std::unique_ptr<ZkClient> m_zkClientPtr;
 };
 
 #endif

@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/wbw/Myproject/ber_mprpc/src/mprpccontroller.cc" "src/CMakeFiles/mprpc.dir/mprpccontroller.cc.o" "gcc" "src/CMakeFiles/mprpc.dir/mprpccontroller.cc.o.d"
   "/home/wbw/Myproject/ber_mprpc/src/rpcheader.pb.cc" "src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o" "gcc" "src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o.d"
   "/home/wbw/Myproject/ber_mprpc/src/rpcprovider.cc" "src/CMakeFiles/mprpc.dir/rpcprovider.cc.o" "gcc" "src/CMakeFiles/mprpc.dir/rpcprovider.cc.o.d"
+  "/home/wbw/Myproject/ber_mprpc/src/zookeeperutil.cc" "src/CMakeFiles/mprpc.dir/zookeeperutil.cc.o" "gcc" "src/CMakeFiles/mprpc.dir/zookeeperutil.cc.o.d"
   )
 
 # Targets to which this target links.

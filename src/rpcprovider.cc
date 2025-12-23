@@ -25,6 +25,10 @@ void RpcProvider::Run()
 {
     std::string ip = MprpcApplication::GetConfig().Load("rpcserverip");
     uint16_t port = stoi(MprpcApplication::GetConfig().Load("rpcserverport"));
+    std::string zk_host = MprpcApplication::GetConfig().Load("zookeeperip");
+    std::string zk_port = MprpcApplication::GetConfig().Load("zookeeperport");
+
+
     //创建InetAddress对象,调查发现需要传入string ip和unit_16 port
     muduo::net::InetAddress adress(ip,port);
     //创建TcpServer对象
@@ -34,6 +38,27 @@ void RpcProvider::Run()
     //绑定读写的回调
     server.setMessageCallback(std::bind(&RpcProvider::onMessage,this,std::placeholders::_1,
         std::placeholders::_2,std::placeholders::_3));
+
+    //把当前rpc节点上要发布的服务全部注册到zk上面，让rpc client可以从zk上发现服务
+    //session timeout   30s     zkclient 网络I/O线程  1/3 * timeout 时间发送ping消息
+    m_zkClient.Start(zk_host,zk_port);
+    // service_name为永久性节点    method_name为临时性节点
+    for(auto &sp : m_serviceMap)
+    {
+        // /service_name /UserServiceRpc
+        std::string service_path = "/" + sp.first;
+        m_zkClient.Create(service_path.c_str(),nullptr,0);
+        for(auto &mp : sp.second.m_methodMap)
+        {
+            // /service_name/method_name /UserServiceRpc/Login 存储当前这个rpc服务节点主机的ip和port
+            std::string method_path = service_path + "/" + mp.first;
+            char method_path_data[128] = {0};
+            sprintf(method_path_data,"%s:%d",ip.c_str(),port);
+            // ZOO_EPHEMERAL表示znode是一个临时性节点
+            m_zkClient.Create(method_path.c_str(),method_path_data,strlen(method_path_data),ZOO_EPHEMERAL);
+        }
+    }
+
     //设置muduo库的线程数量
     server.setThreadNum(4);
     

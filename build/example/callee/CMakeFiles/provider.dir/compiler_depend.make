@@ -1344,12 +1344,30 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: ../example/callee/users
   /usr/local/include/google/protobuf/map_type_handler.h \
   /usr/local/include/google/protobuf/extension_set.h \
   /usr/include/c++/11/cassert \
+  ../src/include/zookeeperutil.h \
+  /usr/include/zookeeper/zookeeper.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/zookeeper/proto.h \
+  /usr/include/zookeeper/zookeeper_version.h \
+  /usr/include/zookeeper/recordio.h \
+  /usr/include/zookeeper/zookeeper.jute.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   ../src/include/mprpcconfig.h \
   ../src/include/mprpcchannel.h \
+  ../src/include/mprpccontroller.h \
   ../example/user.pb.h \
   ../example/resultcode.pb.h \
   ../example/friend.pb.h
 
+
+../src/include/mprpccontroller.h:
+
+/usr/include/zookeeper/zookeeper_version.h:
+
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
+../src/include/zookeeperutil.h:
 
 /usr/include/muduo/base/CurrentThread.h:
 
@@ -1573,6 +1591,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: ../example/callee/users
 
 /usr/include/strings.h:
 
+/usr/include/zookeeper/zookeeper.jute.h:
+
 /usr/include/c++/11/cstdlib:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
@@ -1712,6 +1732,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: ../example/callee/users
 /usr/include/c++/11/ext/type_traits.h:
 
 /usr/include/c++/11/pstl/glue_memory_defs.h:
+
+/usr/include/zookeeper/proto.h:
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
@@ -1951,6 +1973,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: ../example/callee/users
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
+/usr/include/x86_64-linux-gnu/bits/semaphore.h:
+
 /usr/include/boost/core/enable_if.hpp:
 
 ../src/include/mprpcapplication.h:
@@ -2006,6 +2030,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: ../example/callee/users
 /usr/include/c++/11/new:
 
 /usr/include/c++/11/climits:
+
+/usr/include/zookeeper/zookeeper.h:
 
 /usr/include/c++/11/array:
 
@@ -2070,6 +2096,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: ../example/callee/users
 /usr/local/include/google/protobuf/message_lite.h:
 
 /usr/include/c++/11/bits/hashtable_policy.h:
+
+/usr/include/zookeeper/recordio.h:
 
 /usr/include/stdint.h:
 
@@ -2148,6 +2176,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: ../example/callee/users
 /usr/include/c++/11/bits/exception.h:
 
 /usr/include/c++/11/bits/locale_facets.h:
+
+/usr/include/semaphore.h:
 
 /usr/include/c++/11/cwctype:
 
