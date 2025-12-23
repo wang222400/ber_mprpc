@@ -54,17 +54,27 @@ void GetFriendListServiceTest()
     fixbug::GetFriendListRequest request;
     request.set_id(1);
     fixbug::GetFriendListResponse response;
+
+    //定义controller对象
+    MprpcController controller;
+
     //执行rpc远程调用
-    stub.GetFriendList(nullptr,&request,&response,nullptr);
-    // 一次rpc远程调用结束
-    if(response.result().errcode() == 0){
-        std::cout << "rpc GetFriendsList response success!" << std::endl;
-        int size = response.friends_size();
-        for(int i = 0;i<size;++i){
-            std::cout << "index:" << (i+1) << " name:" << response.friends(i) << std::endl;
+    stub.GetFriendList(&controller,&request,&response,nullptr);
+
+    //通过controller判断是否得到了response
+    if(controller.Failed()){
+        std::cout << controller.ErrorText() << std::endl;
+    }else{
+        // 一次rpc远程调用结束
+        if(response.result().errcode() == 0){
+            std::cout << "rpc GetFriendsList response success!" << std::endl;
+            int size = response.friends_size();
+            for(int i = 0;i<size;++i){
+                std::cout << "index:" << (i+1) << " name:" << response.friends(i) << std::endl;
+            }
+        }else {
+            std::cout << "rpc register response error: " << response.result().errmsg() << std::endl;
         }
-    }else {
-        std::cout << "rpc register response error: " << response.result().errmsg() << std::endl;
     }
 }
 

@@ -338,4 +338,5 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /home/wbw/Myproject/ber_mprpc/src/include/mprpcapplication.h \
  /home/wbw/Myproject/ber_mprpc/src/include/rpcprovider.h \
  /home/wbw/Myproject/ber_mprpc/src/include/mprpcconfig.h \
- /home/wbw/Myproject/ber_mprpc/src/include/mprpcchannel.h
+ /home/wbw/Myproject/ber_mprpc/src/include/mprpcchannel.h \
+ /home/wbw/Myproject/ber_mprpc/src/include/mprpccontroller.h

@@ -337,4 +337,5 @@ src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o: \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/11/cassert \
  /home/wbw/Myproject/ber_mprpc/src/include/mprpcconfig.h \
- /home/wbw/Myproject/ber_mprpc/src/include/mprpcchannel.h
+ /home/wbw/Myproject/ber_mprpc/src/include/mprpcchannel.h \
+ /home/wbw/Myproject/ber_mprpc/src/include/mprpccontroller.h

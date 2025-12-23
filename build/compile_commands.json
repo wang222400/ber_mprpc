@@ -25,6 +25,11 @@
   "file": "/home/wbw/Myproject/ber_mprpc/src/mprpcchannel.cc"
 },
 {
+  "directory": "/home/wbw/Myproject/ber_mprpc/build/src",
+  "command": "/usr/bin/g++  -I/home/wbw/Myproject/ber_mprpc/src/include -I/home/wbw/Myproject/ber_mprpc/example -g -o CMakeFiles/mprpc.dir/mprpccontroller.cc.o -c /home/wbw/Myproject/ber_mprpc/src/mprpccontroller.cc",
+  "file": "/home/wbw/Myproject/ber_mprpc/src/mprpccontroller.cc"
+},
+{
   "directory": "/home/wbw/Myproject/ber_mprpc/build/example/callee",
   "command": "/usr/bin/g++  -I/home/wbw/Myproject/ber_mprpc/src/include -I/home/wbw/Myproject/ber_mprpc/example -g -o CMakeFiles/provider.dir/userservice.cc.o -c /home/wbw/Myproject/ber_mprpc/example/callee/userservice.cc",
   "file": "/home/wbw/Myproject/ber_mprpc/example/callee/userservice.cc"

@@ -345,4 +345,6 @@ src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o: \
  /home/wbw/Myproject/ber_mprpc/src/include/rpcheader.pb.h \
  /home/wbw/Myproject/ber_mprpc/src/include/mprpcconfig.h \
  /home/wbw/Myproject/ber_mprpc/src/include/mprpcchannel.h \
+ /home/wbw/Myproject/ber_mprpc/src/include/mprpccontroller.h \
+ /home/wbw/Myproject/ber_mprpc/src/include/mprpccontroller.h \
  /usr/include/arpa/inet.h
