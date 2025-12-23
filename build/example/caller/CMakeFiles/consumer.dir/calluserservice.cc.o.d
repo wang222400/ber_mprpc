@@ -337,4 +337,7 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/11/cassert \
  /home/wbw/Myproject/ber_mprpc/src/include/mprpcconfig.h \
- /home/wbw/Myproject/ber_mprpc/example/user.pb.h
+ /home/wbw/Myproject/ber_mprpc/src/include/mprpcchannel.h \
+ /home/wbw/Myproject/ber_mprpc/example/user.pb.h \
+ /home/wbw/Myproject/ber_mprpc/example/resultcode.pb.h \
+ /home/wbw/Myproject/ber_mprpc/example/friend.pb.h

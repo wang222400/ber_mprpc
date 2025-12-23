@@ -97,20 +97,52 @@ example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/consumer.dir/__/user.pb.cc.s"
 	cd /home/wbw/Myproject/ber_mprpc/build/example/caller && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wbw/Myproject/ber_mprpc/example/user.pb.cc -o CMakeFiles/consumer.dir/__/user.pb.cc.s
 
+example/caller/CMakeFiles/consumer.dir/__/resultcode.pb.cc.o: example/caller/CMakeFiles/consumer.dir/flags.make
+example/caller/CMakeFiles/consumer.dir/__/resultcode.pb.cc.o: ../example/resultcode.pb.cc
+example/caller/CMakeFiles/consumer.dir/__/resultcode.pb.cc.o: example/caller/CMakeFiles/consumer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wbw/Myproject/ber_mprpc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object example/caller/CMakeFiles/consumer.dir/__/resultcode.pb.cc.o"
+	cd /home/wbw/Myproject/ber_mprpc/build/example/caller && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT example/caller/CMakeFiles/consumer.dir/__/resultcode.pb.cc.o -MF CMakeFiles/consumer.dir/__/resultcode.pb.cc.o.d -o CMakeFiles/consumer.dir/__/resultcode.pb.cc.o -c /home/wbw/Myproject/ber_mprpc/example/resultcode.pb.cc
+
+example/caller/CMakeFiles/consumer.dir/__/resultcode.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/consumer.dir/__/resultcode.pb.cc.i"
+	cd /home/wbw/Myproject/ber_mprpc/build/example/caller && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wbw/Myproject/ber_mprpc/example/resultcode.pb.cc > CMakeFiles/consumer.dir/__/resultcode.pb.cc.i
+
+example/caller/CMakeFiles/consumer.dir/__/resultcode.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/consumer.dir/__/resultcode.pb.cc.s"
+	cd /home/wbw/Myproject/ber_mprpc/build/example/caller && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wbw/Myproject/ber_mprpc/example/resultcode.pb.cc -o CMakeFiles/consumer.dir/__/resultcode.pb.cc.s
+
+example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o: example/caller/CMakeFiles/consumer.dir/flags.make
+example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o: ../example/friend.pb.cc
+example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o: example/caller/CMakeFiles/consumer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wbw/Myproject/ber_mprpc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o"
+	cd /home/wbw/Myproject/ber_mprpc/build/example/caller && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o -MF CMakeFiles/consumer.dir/__/friend.pb.cc.o.d -o CMakeFiles/consumer.dir/__/friend.pb.cc.o -c /home/wbw/Myproject/ber_mprpc/example/friend.pb.cc
+
+example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/consumer.dir/__/friend.pb.cc.i"
+	cd /home/wbw/Myproject/ber_mprpc/build/example/caller && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wbw/Myproject/ber_mprpc/example/friend.pb.cc > CMakeFiles/consumer.dir/__/friend.pb.cc.i
+
+example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/consumer.dir/__/friend.pb.cc.s"
+	cd /home/wbw/Myproject/ber_mprpc/build/example/caller && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wbw/Myproject/ber_mprpc/example/friend.pb.cc -o CMakeFiles/consumer.dir/__/friend.pb.cc.s
+
 # Object files for target consumer
 consumer_OBJECTS = \
 "CMakeFiles/consumer.dir/calluserservice.cc.o" \
-"CMakeFiles/consumer.dir/__/user.pb.cc.o"
+"CMakeFiles/consumer.dir/__/user.pb.cc.o" \
+"CMakeFiles/consumer.dir/__/resultcode.pb.cc.o" \
+"CMakeFiles/consumer.dir/__/friend.pb.cc.o"
 
 # External object files for target consumer
 consumer_EXTERNAL_OBJECTS =
 
 ../bin/consumer: example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o
 ../bin/consumer: example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.o
+../bin/consumer: example/caller/CMakeFiles/consumer.dir/__/resultcode.pb.cc.o
+../bin/consumer: example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o
 ../bin/consumer: example/caller/CMakeFiles/consumer.dir/build.make
 ../bin/consumer: ../lib/libmprpc.a
 ../bin/consumer: example/caller/CMakeFiles/consumer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wbw/Myproject/ber_mprpc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../../bin/consumer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wbw/Myproject/ber_mprpc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../../../bin/consumer"
 	cd /home/wbw/Myproject/ber_mprpc/build/example/caller && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/consumer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

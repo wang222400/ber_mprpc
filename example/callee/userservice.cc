@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
-#include "user.pb.h"
+#include <vector>
 #include "mprpcapplication.h"
+#include "user.pb.h"
+#include "friend.pb.h"
 /* UserService 原来是一个本地服务器，提供了两个进程方法，Login和GetFriendLists，怎么把它变成一个rpc？ */
 class UserService : public fixbug::UserServiceRpc //使用在rpc服务发布端
 {
@@ -10,6 +12,12 @@ public:
     {
         std::cout<<"doing local service: Login" <<std::endl;
         std::cout<<"name:"<<name<<"pwd:"<<pwd<<std::endl;
+        return true;
+    }
+    bool Register(uint32_t id,std::string name, std::string pwd)
+    {
+        std::cout << "doing local service: Register" << std::endl;
+        std::cout << "id:" << id << "name:" << name << " pwd:" << pwd << std::endl;
         return true;
     }
 
@@ -31,10 +39,70 @@ public:
         fixbug::ResultCode *code = response->mutable_result();
         code->set_errcode(0);
         code->set_errmsg("");
-        response->set_sucess(login_result);
+        response->set_success(login_result);
         //执行回调操作,执行响应对象数据的序列化和网络发送（由框架来完成）
         done->Run();
     }
+
+    virtual void Register(::google::protobuf::RpcController* controller,
+                       const ::fixbug::RegisterRequest* request,
+                       ::fixbug::RegisterResponse* response,
+                       ::google::protobuf::Closure* done)
+    {
+        //框架给业务上报了请求参数RegistRequest， 应用获取相应数据做本地业务
+        uint32_t id = request->id();
+        std::string name = request->name();
+        std::string pwd = request->pwd();
+        //做本地业务
+        bool ret = Register(id,name,pwd);
+
+        //生成响应
+        response->mutable_result()->set_errcode(0);
+        response->mutable_result()->set_errmsg("");
+        response->set_success(ret);
+        
+         //执行回调操作,执行响应对象数据的序列化和网络发送（由框架来完成）
+        done->Run();
+    }
+
+
+};
+
+class GetFriendListService : public fixbug::GetFriendListSerciveRpc{
+    std::vector<std::string> GetFriendList(uint32_t id){
+        std::vector<std::string> res;
+        if(id == 1){
+            res.push_back("zhang san");
+            res.push_back("li si");
+            std::cout<<"get the friend list of id:" << id << std::endl;
+            return res;
+        }else if(id == 2){
+            res.push_back("wang wu");
+            res.push_back("Li si");
+            std::cout<<"get the friend list of id:" << id << std::endl;
+            return res;
+        }else{
+            res.push_back("id not exist!");
+            std::cout<<"id: "<< id <<"not exist!" << std::endl;
+            return res;
+        }
+    }
+    void GetFriendList(::google::protobuf::RpcController* controller,
+                       const ::fixbug::GetFriendListRequest* request,
+                       ::fixbug::GetFriendListResponse* response,
+                       ::google::protobuf::Closure* done)
+    {
+        uint32_t id = request->id();
+        std::vector<std::string> res = GetFriendList(id);
+        response->mutable_result()->set_errcode(0);
+        response->mutable_result()->set_errmsg("");
+        for(const auto& s:res){
+            std::string *p = response->add_friends();
+            *p = s;
+        }
+        done->Run();
+    }
+
 };
 
 
@@ -42,12 +110,13 @@ public:
 int main(int argc, char **argv)
 {
     //调用框架的初始化操作
-    MprpcApplication::GetInstance().Init(argc,argv);
+    MprpcApplication::Init(argc,argv);
 
     //provider是一个rpc网络服务对象，把UserService对象发布到rpc节点上
     RpcProvider provider;
     //需要一张表，来记录服务对象和其发布的所有的服务方法，当rpc请求到达时可以调用
     provider.NotifyService(new UserService());
+    provider.NotifyService(new GetFriendListService());
     //启动一个rpc服务发布节点，Run以后，进程进入阻塞状态，等待远程的rpc调用请求
     provider.Run();
 

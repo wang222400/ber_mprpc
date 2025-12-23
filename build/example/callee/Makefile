@@ -130,6 +130,54 @@ provider/fast:
 	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
 .PHONY : provider/fast
 
+__/friend.pb.o: __/friend.pb.cc.o
+.PHONY : __/friend.pb.o
+
+# target to build an object file
+__/friend.pb.cc.o:
+	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/friend.pb.cc.o
+.PHONY : __/friend.pb.cc.o
+
+__/friend.pb.i: __/friend.pb.cc.i
+.PHONY : __/friend.pb.i
+
+# target to preprocess a source file
+__/friend.pb.cc.i:
+	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/friend.pb.cc.i
+.PHONY : __/friend.pb.cc.i
+
+__/friend.pb.s: __/friend.pb.cc.s
+.PHONY : __/friend.pb.s
+
+# target to generate assembly for a file
+__/friend.pb.cc.s:
+	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/friend.pb.cc.s
+.PHONY : __/friend.pb.cc.s
+
+__/resultcode.pb.o: __/resultcode.pb.cc.o
+.PHONY : __/resultcode.pb.o
+
+# target to build an object file
+__/resultcode.pb.cc.o:
+	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/resultcode.pb.cc.o
+.PHONY : __/resultcode.pb.cc.o
+
+__/resultcode.pb.i: __/resultcode.pb.cc.i
+.PHONY : __/resultcode.pb.i
+
+# target to preprocess a source file
+__/resultcode.pb.cc.i:
+	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/resultcode.pb.cc.i
+.PHONY : __/resultcode.pb.cc.i
+
+__/resultcode.pb.s: __/resultcode.pb.cc.s
+.PHONY : __/resultcode.pb.s
+
+# target to generate assembly for a file
+__/resultcode.pb.cc.s:
+	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/resultcode.pb.cc.s
+.PHONY : __/resultcode.pb.cc.s
+
 __/user.pb.o: __/user.pb.cc.o
 .PHONY : __/user.pb.o
 
@@ -187,6 +235,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... provider"
+	@echo "... __/friend.pb.o"
+	@echo "... __/friend.pb.i"
+	@echo "... __/friend.pb.s"
+	@echo "... __/resultcode.pb.o"
+	@echo "... __/resultcode.pb.i"
+	@echo "... __/resultcode.pb.s"
 	@echo "... __/user.pb.o"
 	@echo "... __/user.pb.i"
 	@echo "... __/user.pb.s"

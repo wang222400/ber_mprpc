@@ -337,4 +337,5 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/include/c++/11/cassert \
  /home/wbw/Myproject/ber_mprpc/src/include/mprpcapplication.h \
  /home/wbw/Myproject/ber_mprpc/src/include/rpcprovider.h \
- /home/wbw/Myproject/ber_mprpc/src/include/mprpcconfig.h
+ /home/wbw/Myproject/ber_mprpc/src/include/mprpcconfig.h \
+ /home/wbw/Myproject/ber_mprpc/src/include/mprpcchannel.h

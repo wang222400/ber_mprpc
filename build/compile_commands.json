@@ -20,6 +20,11 @@
   "file": "/home/wbw/Myproject/ber_mprpc/src/rpcprovider.cc"
 },
 {
+  "directory": "/home/wbw/Myproject/ber_mprpc/build/src",
+  "command": "/usr/bin/g++  -I/home/wbw/Myproject/ber_mprpc/src/include -I/home/wbw/Myproject/ber_mprpc/example -g -o CMakeFiles/mprpc.dir/mprpcchannel.cc.o -c /home/wbw/Myproject/ber_mprpc/src/mprpcchannel.cc",
+  "file": "/home/wbw/Myproject/ber_mprpc/src/mprpcchannel.cc"
+},
+{
   "directory": "/home/wbw/Myproject/ber_mprpc/build/example/callee",
   "command": "/usr/bin/g++  -I/home/wbw/Myproject/ber_mprpc/src/include -I/home/wbw/Myproject/ber_mprpc/example -g -o CMakeFiles/provider.dir/userservice.cc.o -c /home/wbw/Myproject/ber_mprpc/example/callee/userservice.cc",
   "file": "/home/wbw/Myproject/ber_mprpc/example/callee/userservice.cc"
@@ -30,6 +35,16 @@
   "file": "/home/wbw/Myproject/ber_mprpc/example/user.pb.cc"
 },
 {
+  "directory": "/home/wbw/Myproject/ber_mprpc/build/example/callee",
+  "command": "/usr/bin/g++  -I/home/wbw/Myproject/ber_mprpc/src/include -I/home/wbw/Myproject/ber_mprpc/example -g -o CMakeFiles/provider.dir/__/resultcode.pb.cc.o -c /home/wbw/Myproject/ber_mprpc/example/resultcode.pb.cc",
+  "file": "/home/wbw/Myproject/ber_mprpc/example/resultcode.pb.cc"
+},
+{
+  "directory": "/home/wbw/Myproject/ber_mprpc/build/example/callee",
+  "command": "/usr/bin/g++  -I/home/wbw/Myproject/ber_mprpc/src/include -I/home/wbw/Myproject/ber_mprpc/example -g -o CMakeFiles/provider.dir/__/friend.pb.cc.o -c /home/wbw/Myproject/ber_mprpc/example/friend.pb.cc",
+  "file": "/home/wbw/Myproject/ber_mprpc/example/friend.pb.cc"
+},
+{
   "directory": "/home/wbw/Myproject/ber_mprpc/build/example/caller",
   "command": "/usr/bin/g++  -I/home/wbw/Myproject/ber_mprpc/src/include -I/home/wbw/Myproject/ber_mprpc/example -g -o CMakeFiles/consumer.dir/calluserservice.cc.o -c /home/wbw/Myproject/ber_mprpc/example/caller/calluserservice.cc",
   "file": "/home/wbw/Myproject/ber_mprpc/example/caller/calluserservice.cc"
@@ -38,5 +53,15 @@
   "directory": "/home/wbw/Myproject/ber_mprpc/build/example/caller",
   "command": "/usr/bin/g++  -I/home/wbw/Myproject/ber_mprpc/src/include -I/home/wbw/Myproject/ber_mprpc/example -g -o CMakeFiles/consumer.dir/__/user.pb.cc.o -c /home/wbw/Myproject/ber_mprpc/example/user.pb.cc",
   "file": "/home/wbw/Myproject/ber_mprpc/example/user.pb.cc"
+},
+{
+  "directory": "/home/wbw/Myproject/ber_mprpc/build/example/caller",
+  "command": "/usr/bin/g++  -I/home/wbw/Myproject/ber_mprpc/src/include -I/home/wbw/Myproject/ber_mprpc/example -g -o CMakeFiles/consumer.dir/__/resultcode.pb.cc.o -c /home/wbw/Myproject/ber_mprpc/example/resultcode.pb.cc",
+  "file": "/home/wbw/Myproject/ber_mprpc/example/resultcode.pb.cc"
+},
+{
+  "directory": "/home/wbw/Myproject/ber_mprpc/build/example/caller",
+  "command": "/usr/bin/g++  -I/home/wbw/Myproject/ber_mprpc/src/include -I/home/wbw/Myproject/ber_mprpc/example -g -o CMakeFiles/consumer.dir/__/friend.pb.cc.o -c /home/wbw/Myproject/ber_mprpc/example/friend.pb.cc",
+  "file": "/home/wbw/Myproject/ber_mprpc/example/friend.pb.cc"
 }
 ]

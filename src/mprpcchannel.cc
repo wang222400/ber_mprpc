@@ -81,9 +81,8 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
 
     if (!response->ParseFromArray(recv_buf, recv_size)) {
         char errtxt[512] = "\0";
-        sprintf(errtxt, "parse error! recv_buf: %s", recv_buf);
+        snprintf(errtxt,sizeof(errtxt), "parse error! recv size: %d", recv_size);
     }
     close(clientfd);
     return;
-
 }

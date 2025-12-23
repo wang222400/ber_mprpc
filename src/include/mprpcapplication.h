@@ -2,10 +2,11 @@
 #define MPRPCAPPLICATION_H
 #include "rpcprovider.h"
 #include "mprpcconfig.h"
+#include "mprpcchannel.h"
 //框架的基础类，负责框架的初始化操作
 class MprpcApplication{
 public:
-    void Init(int argc,char** argv);
+    static void Init(int argc,char** argv);
 
     static MprpcApplication& GetInstance();
 

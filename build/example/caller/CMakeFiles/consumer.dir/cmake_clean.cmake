@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "../../../bin/consumer"
   "../../../bin/consumer.pdb"
+  "CMakeFiles/consumer.dir/__/friend.pb.cc.o"
+  "CMakeFiles/consumer.dir/__/friend.pb.cc.o.d"
+  "CMakeFiles/consumer.dir/__/resultcode.pb.cc.o"
+  "CMakeFiles/consumer.dir/__/resultcode.pb.cc.o.d"
   "CMakeFiles/consumer.dir/__/user.pb.cc.o"
   "CMakeFiles/consumer.dir/__/user.pb.cc.o.d"
   "CMakeFiles/consumer.dir/calluserservice.cc.o"

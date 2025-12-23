@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/wbw/Myproject/ber_mprpc/example/friend.pb.cc" "example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o" "gcc" "example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o.d"
+  "/home/wbw/Myproject/ber_mprpc/example/resultcode.pb.cc" "example/caller/CMakeFiles/consumer.dir/__/resultcode.pb.cc.o" "gcc" "example/caller/CMakeFiles/consumer.dir/__/resultcode.pb.cc.o.d"
   "/home/wbw/Myproject/ber_mprpc/example/user.pb.cc" "example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.o" "gcc" "example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.o.d"
   "/home/wbw/Myproject/ber_mprpc/example/caller/calluserservice.cc" "example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o" "gcc" "example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o.d"
   )
