@@ -22,6 +22,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         args_size = args_str.size();
     }else{
         //std::cout << "serialize request error" << std::endl;
+        LOG_ERROR("serialize request error");
         controller->SetFailed("serialize request error");
         return;
     }
@@ -37,6 +38,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         header_size = rpc_header_str.size();
     }else{
         //std::cout << "serialize rpc header error" << std::endl;
+        LOG_ERROR("serialize rpc header error");
         controller->SetFailed("serialize rpc header error");
         return;
     }

@@ -1356,10 +1356,43 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
   ../src/include/mprpcconfig.h \
   ../src/include/mprpcchannel.h \
   ../src/include/mprpccontroller.h \
+  ../src/include/log.h \
+  ../src/include/blockqueue.h \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/condition_variable \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
   ../example/user.pb.h \
   ../example/resultcode.pb.h \
   ../example/friend.pb.h
 
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
+/usr/include/x86_64-linux-gnu/asm/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
+/usr/include/c++/11/bits/deque.tcc:
+
+../src/include/blockqueue.h:
 
 ../src/include/mprpccontroller.h:
 
@@ -1432,6 +1465,8 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 /usr/include/muduo/net/InetAddress.h:
 
 /usr/include/muduo/net/Buffer.h:
+
+../src/include/log.h:
 
 /usr/include/muduo/net/Endian.h:
 
@@ -1513,6 +1548,10 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 
 /usr/local/include/google/protobuf/generated_enum_util.h:
 
+/usr/include/linux/stat.h:
+
+/usr/include/c++/11/deque:
+
 ../src/include/mprpcchannel.h:
 
 /usr/include/boost/config/compiler/gcc.hpp:
@@ -1544,6 +1583,10 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/include/c++/11/ctime:
+
+/usr/include/c++/11/thread:
+
+/usr/include/c++/11/condition_variable:
 
 /usr/include/muduo/net/TcpServer.h:
 
@@ -1633,6 +1676,8 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
+/usr/include/c++/11/bits/stl_deque.h:
+
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
@@ -1679,6 +1724,8 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
 /usr/include/c++/11/bits/stl_set.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
@@ -1710,6 +1757,8 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx.h:
 
 /usr/include/unistd.h:
 
@@ -1891,6 +1940,8 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 
 /usr/include/ctype.h:
 
+/usr/include/c++/11/bits/std_thread.h:
+
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
@@ -1914,6 +1965,8 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 /usr/include/linux/limits.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/asm-generic/types.h:
 
 /usr/include/asm-generic/bitsperlong.h:
 
@@ -2067,6 +2120,8 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 
 /usr/include/string.h:
 
+/usr/include/asm-generic/int-ll64.h:
+
 /usr/include/c++/11/bits/stl_algo.h:
 
 /usr/local/include/google/protobuf/explicitly_constructed.h:
@@ -2092,6 +2147,8 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 /usr/include/c++/11/typeinfo:
 
 /usr/include/c++/11/bits/hashtable.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx-generic.h:
 
 /usr/local/include/google/protobuf/message_lite.h:
 
@@ -2177,15 +2234,21 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/c
 
 /usr/include/c++/11/bits/locale_facets.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
 /usr/include/semaphore.h:
 
 /usr/include/c++/11/cwctype:
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
+/usr/include/linux/types.h:
+
 /usr/local/include/google/protobuf/stubs/status.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+/usr/include/c++/11/bits/this_thread_sleep.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 

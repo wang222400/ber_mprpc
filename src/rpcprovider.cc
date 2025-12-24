@@ -62,8 +62,12 @@ void RpcProvider::Run()
     //设置muduo库的线程数量
     server.setThreadNum(4);
     
-    std::cout << "RpcProvider start service ip at:"<<ip<<std::endl;
-    std::cout << "RpcProvider start service port at:"<<port<<std::endl;
+    std::string info = "RpcProvider start service ip at:"+ip;
+    LOG_INFO(info.c_str());
+    info = "RpcProvider start service port at:" + std::to_string(port);
+    LOG_INFO(info.c_str());
+    // std::cout << "RpcProvider start service ip at:"<<ip<<std::endl;
+    // std::cout << "RpcProvider start service port at:"<<port<<std::endl;
 
     //启动网络服务
     server.start();
@@ -94,7 +98,8 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr& conn,muduo::net:
         method_name = rpcHeader.method_name();
         args_size = rpcHeader.args_size();
     }else{
-        std::cout << "rpc_header_str: " << rpc_header_str << ", parse error!" << std::endl;
+        std::string info = "rpc_header_str: " + rpc_header_str + ", parse error!";
+        LOG_ERROR(info.c_str());
         return;
     }
     std::string args_str = recv_buf.substr(4+header_size,args_size);
@@ -102,7 +107,9 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr& conn,muduo::net:
     // 获取service对象和method对象
     auto it = m_serviceMap.find(service_name);
     if(it == m_serviceMap.end()){
-        std::cout << service_name << " is not exist! " << std::endl;
+        std::string erro = service_name + " is not exist! ";
+        LOG_ERROR(erro.c_str());
+        // std::cout << service_name << " is not exist! " << std::endl;
         return;
     }
     auto mit =  it->second.m_methodMap.find(method_name);

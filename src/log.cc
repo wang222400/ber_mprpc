@@ -177,5 +177,6 @@ void Log::AsyncWrite_() {
     while(queue_->pop(str)) {
         std::lock_guard<std::mutex> locker(mutex_);
         fputs(str.c_str(), fp_);
+        fflush(fp_); // 【新增】手动刷新，确保立马看到日志
     }
 }

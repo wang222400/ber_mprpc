@@ -47,6 +47,7 @@ void ZkClient::Start(const std::string& host, const std::string& port){
     zoo_set_context(m_zhandle,&sem);
 
     sem_wait(&sem);
+    LOG_INFO("zookeeper_init success!");
     std::cout << "zookeeper_init success!" << std::endl;
 }
 
@@ -64,7 +65,9 @@ void ZkClient::Create(const char* path, const char* data, int datalen, int state
         flag = zoo_create(m_zhandle,path,data,datalen,&ZOO_OPEN_ACL_UNSAFE,state,path_buffer,bufferlen);
         if(flag == ZOK)
         {
-            std::cout << "znode create success... path:" << path << std::endl;
+            std::string info = "znode create success... path:"+std::string(path);
+            LOG_INFO(info.c_str());
+            // std::cout << "znode create success... path:" << path << std::endl;
         }
         else{
             std::cout << "flag:" << flag << std::endl;
