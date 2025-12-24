@@ -130,6 +130,30 @@ mprpc/fast:
 	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/build
 .PHONY : mprpc/fast
 
+log.o: log.cc.o
+.PHONY : log.o
+
+# target to build an object file
+log.cc.o:
+	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/log.cc.o
+.PHONY : log.cc.o
+
+log.i: log.cc.i
+.PHONY : log.i
+
+# target to preprocess a source file
+log.cc.i:
+	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/log.cc.i
+.PHONY : log.cc.i
+
+log.s: log.cc.s
+.PHONY : log.s
+
+# target to generate assembly for a file
+log.cc.s:
+	cd /home/wbw/Myproject/ber_mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/log.cc.s
+.PHONY : log.cc.s
+
 mprpcapplication.o: mprpcapplication.cc.o
 .PHONY : mprpcapplication.o
 
@@ -307,6 +331,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mprpc"
+	@echo "... log.o"
+	@echo "... log.i"
+	@echo "... log.s"
 	@echo "... mprpcapplication.o"
 	@echo "... mprpcapplication.i"
 	@echo "... mprpcapplication.s"
